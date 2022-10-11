@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script>
+	//'use strict'; //자바스크립트를 엄격하게
+	
+	console.log(this) //window 출력
+	
+	function method(){
+		console.log(this); 
+	}
+	method();
+	window.method();
+	
+	var object = {
+			data : 'Park',
+			method : function(){
+				console.log(this)
+			}
+	}
+	object.data;
+	object.method();
+	
+	var object2 = {
+			data : {
+			method(){
+				console.log(this)
+			}
+		}
+	}
+	object2.data.method();
+	
+	
+</script>
+
+</body>
+</html>
