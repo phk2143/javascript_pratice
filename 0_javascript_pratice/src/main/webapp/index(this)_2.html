@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<button id = "button">버튼 테스트</button>
+
+<script>
+
+	function machine() {
+		this.name = 'park'
+	}
+	
+	var object = new machine();
+	
+	
+	document.getElementById('button').addEventListener('click', function(e){
+		console.log(this); 
+		console.log(e.currentTarget);
+		
+		var array = [1,2,3];
+		array.forEach(function(a){
+			console.log(a)
+			console.log(this)
+		})
+		
+	})
+	
+	var object2 = {
+		name : ['park', 'moon'],
+		mathod : function(){
+			console.log(this); //메소드 주인
+			object2.name.forEach(function(){
+				console.log(this) //window
+			})
+		}
+	}
+	
+	object2.mathod();
+	
+</script>
+
+</body>
+</html>
