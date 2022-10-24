@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<button id = 'button'>버튼</button>
+
+	<!-- 장점
+			1. 입출력 기계 만들 때 보기 쉬움
+			2. 소괄호 생략 가능
+			3. 코드 한줄이면 중괄호도 생략 가능
+	 -->
+<script>
+	var method = (a) => {
+		console.log(a);
+		return a + 10
+		
+	}
+	method(5);
+	
+	[1,2,3,4].forEach( a => console.log(a) );
+	
+	document.getElementById('button').addEventListener('click', (e) => {e.currentTarget;})
+	
+	var object = {
+		method : () => {
+			return this
+		}
+	}
+	object.method();
+	
+	
+</script>
+
+</body>
+</html>
