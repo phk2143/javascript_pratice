@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div style="display: none">모달창0</div>
+<div style="display: none">모달창1</div>
+<div style="display: none">모달창2</div>
+
+<button>버튼0</button>
+<button>버튼1</button>
+<button>버튼2</button>
+<script>
+	var 버튼들 = document.querySelectorAll('button');
+	var 모달창들 = document.querySelectorAll('div');
+	
+	//반복문 var를 쓰면 전역변수가 3으로 되어서 에러
+	for (let i=0; i<3; i++){
+	버튼틀[i].addEventListener('click', function(){
+		모달창들[i].style.display = 'block'
+	});
+	}
+</script>
+
+<script>
+	
+	method();
+	
+	//let, const : 호이스팅시 undefined 할당X
+	function method() {
+		console.log(안녕);
+		let 안녕 = 'Hello';
+	}
+	
+	method2();
+	
+	//호이스팅시 method2는 아직 함수가 아니여서 에러
+	var method2 = function(){
+		console.log(안녕);
+		var 안녕 = 'Hello';
+	}
+	
+	
+</script>
+
+</body>
+</html>
